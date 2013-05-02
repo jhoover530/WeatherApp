@@ -28,6 +28,7 @@
     IBOutlet UILabel *forecastDate2;
     IBOutlet UILabel *forecastDate3;
     IBOutlet UILabel *forecastDate4;
+    IBOutlet UILabel *tempForm;
     
     IBOutlet UIImageView *weatherImage;
     IBOutlet UIImageView *forecastPic1;
@@ -47,7 +48,7 @@
 @property (nonatomic, strong) NSMutableArray *arrayOfHighC;
 @property (nonatomic, strong) NSMutableArray *arrayOfLowF;
 @property (nonatomic, strong) NSMutableArray *arrayOfLowC;
-@property (nonatomic, assign) NSInteger fahrenheit;
+//@property (nonatomic, assign) NSInteger fahrenheit;
 //@property (nonatomic, strong) NSMutableArray *arrayOfSDHigh;
 //@property (nonatomic, strong) NSMutableArray *arrayOfSDLow;
 

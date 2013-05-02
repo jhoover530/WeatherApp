@@ -19,12 +19,13 @@
     NSDictionary *tmax2m;
     NSDictionary *tmin2m;
     NSDictionary *apcpsfc;
+    Boolean fahrenheit;
 }
 @end
 
 @implementation ViewController
 
-@synthesize weatherArray, arrayOfRain, arrayOfSnow, arrayOfSun, arrayOfPrecip, arrayOfHighF, arrayOfHighC, arrayOfLowF, arrayOfLowC, fahrenheit;
+@synthesize weatherArray, arrayOfRain, arrayOfSnow, arrayOfSun, arrayOfPrecip, arrayOfHighF, arrayOfHighC, arrayOfLowF, arrayOfLowC;
 
 - (void)viewDidLoad
 {
@@ -346,11 +347,15 @@
     [forecastHigh4 setText:[NSString stringWithFormat:@"%d°", HighDay5]];
     [forecastLow4 setText:[NSString stringWithFormat:@"%d°", LowDay5]];
     
-    fahrenheit = 1;
-    //[NSTimer scheduledTimerWithTimeInterval:15.0 target:self selector:@selector(updateTemps) userInfo:nil repeats:YES];
+    fahrenheit = FALSE;
+    
+    //code for making the app switch temp between fahrenheit and celcius every 15 seconds
+    //the next line can be commented out if the app is to remain only on fahrenheit temps
+    [NSTimer scheduledTimerWithTimeInterval:15.0 target:self selector:@selector(updateTemps) userInfo:nil repeats:YES];
     
     [currentTempLabel setText:@"68°"];
     [dateLabel setText:date];
+    [tempForm setText:@"F"];
     [forecastDate1 setText:fdString1];
     [forecastDate2 setText:fdString2];
     [forecastDate3 setText:fdString3];
@@ -491,7 +496,7 @@
     int LowDay4;
     int LowDay5;
     
-    if(fahrenheit == 1)
+    if(fahrenheit == TRUE)
     {
         HighDay1 = [[arrayOfHighF objectAtIndex: 0] integerValue];
         HighDay2 = [[arrayOfHighF objectAtIndex: 4] integerValue];
@@ -503,8 +508,9 @@
         LowDay3 = [[arrayOfLowF objectAtIndex: 8] integerValue];
         LowDay4 = [[arrayOfLowF objectAtIndex:12] integerValue];
         LowDay5 = [[arrayOfLowF objectAtIndex:16] integerValue];
+        [tempForm setText:@"F"];
         
-        fahrenheit = 0;
+        fahrenheit = FALSE;
     }
     else
     {
@@ -518,8 +524,9 @@
         LowDay3 = [[arrayOfLowC objectAtIndex: 8] integerValue];
         LowDay4 = [[arrayOfLowC objectAtIndex:12] integerValue];
         LowDay5 = [[arrayOfLowC objectAtIndex:16] integerValue];
+        [tempForm setText:@"C"];
         
-        fahrenheit = 1;
+        fahrenheit = TRUE;
     }
     
     [currentHighLabel setText:[NSString stringWithFormat:@"%d°", HighDay1]];
