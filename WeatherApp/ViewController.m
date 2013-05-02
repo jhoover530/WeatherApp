@@ -24,7 +24,7 @@
 
 @implementation ViewController
 
-@synthesize weatherArray, arrayOfRain, arrayOfSnow, arrayOfSun, arrayOfPrecip, arrayOfHighF, arrayOfHighC, arrayOfLowF, arrayOfLowC, fahrenheit, timer;
+@synthesize weatherArray, arrayOfRain, arrayOfSnow, arrayOfSun, arrayOfPrecip, arrayOfHighF, arrayOfHighC, arrayOfLowF, arrayOfLowC, fahrenheit;
 
 - (void)viewDidLoad
 {
@@ -324,7 +324,30 @@
     NSString *fdString3 = [forecastDateFormatter stringFromDate:fDate3];
     NSString *fdString4 = [forecastDateFormatter stringFromDate:fDate4];
     
-    timer = [NSTimer sheduledTimerWithTimeInterval:2.0 target:self selector:@selector(updateTemps:) userInfo:nil repeats:YES];
+    int HighDay1 = [[arrayOfHighF objectAtIndex: 0] integerValue];
+    int HighDay2 = [[arrayOfHighF objectAtIndex: 4] integerValue];
+    int HighDay3 = [[arrayOfHighF objectAtIndex: 8] integerValue];
+    int HighDay4 = [[arrayOfHighF objectAtIndex:12] integerValue];
+    int HighDay5 = [[arrayOfHighF objectAtIndex:16] integerValue];
+    int LowDay1 = [[arrayOfLowF objectAtIndex: 0] integerValue];
+    int LowDay2 = [[arrayOfLowF objectAtIndex: 4] integerValue];
+    int LowDay3 = [[arrayOfLowF objectAtIndex: 8] integerValue];
+    int LowDay4 = [[arrayOfLowF objectAtIndex:12] integerValue];
+    int LowDay5 = [[arrayOfLowF objectAtIndex:16] integerValue];
+    
+    [currentHighLabel setText:[NSString stringWithFormat:@"%d°", HighDay1]];
+    [currentLowLabel setText:[NSString stringWithFormat:@"%d°", LowDay1]];
+    [forecastHigh1 setText:[NSString stringWithFormat:@"%d°", HighDay2]];
+    [forecastLow1 setText:[NSString stringWithFormat:@"%d°", LowDay2]];
+    [forecastHigh2 setText:[NSString stringWithFormat:@"%d°", HighDay3]];
+    [forecastLow2 setText:[NSString stringWithFormat:@"%d°", LowDay3]];
+    [forecastHigh3 setText:[NSString stringWithFormat:@"%d°", HighDay4]];
+    [forecastLow3 setText:[NSString stringWithFormat:@"%d°", LowDay4]];
+    [forecastHigh4 setText:[NSString stringWithFormat:@"%d°", HighDay5]];
+    [forecastLow4 setText:[NSString stringWithFormat:@"%d°", LowDay5]];
+    
+    fahrenheit = 1;
+    //[NSTimer scheduledTimerWithTimeInterval:15.0 target:self selector:@selector(updateTemps) userInfo:nil repeats:YES];
     
     [currentTempLabel setText:@"68°"];
     [dateLabel setText:date];
@@ -457,11 +480,6 @@
 
 - (void)updateTemps
 {
-    if((fahrenheit != 1)&&(fahrenheit != 0))
-    {
-        fahrenheit = 1;
-    }
-    
     int HighDay1;
     int HighDay2;
     int HighDay3;
@@ -488,7 +506,7 @@
         
         fahrenheit = 0;
     }
-    else if(fahrenheit == 0)
+    else
     {
         HighDay1 = [[arrayOfHighC objectAtIndex: 0] integerValue];
         HighDay2 = [[arrayOfHighC objectAtIndex: 4] integerValue];

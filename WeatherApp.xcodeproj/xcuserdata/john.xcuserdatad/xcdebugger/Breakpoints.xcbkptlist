@@ -47,25 +47,25 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "WeatherApp/ViewController.m"
-         timestampString = "389063649.64595"
+         timestampString = "389093144.905897"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "22"
-         endingLineNumber = "22"
+         startingLineNumber = "21"
+         endingLineNumber = "21"
          landmarkName = "@interface ViewController()"
          landmarkType = "2">
       </FileBreakpoint>
       <FileBreakpoint
-         shouldBeEnabled = "No"
+         shouldBeEnabled = "Yes"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "WeatherApp/ViewController.m"
-         timestampString = "389078152.89325"
+         timestampString = "389093786.121617"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "461"
-         endingLineNumber = "461"
-         landmarkName = "-updateTemps:"
+         startingLineNumber = "483"
+         endingLineNumber = "483"
+         landmarkName = "-updateTemps"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -73,25 +73,12 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "WeatherApp/ViewController.m"
-         timestampString = "389079526.581033"
+         timestampString = "389093786.121617"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "460"
-         endingLineNumber = "460"
-         landmarkName = "-updateTemps:"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "Yes"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "WeatherApp/ViewController.m"
-         timestampString = "389080533.586466"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "465"
-         endingLineNumber = "465"
-         landmarkName = "-updateTemps:"
+         startingLineNumber = "509"
+         endingLineNumber = "509"
+         landmarkName = "-updateTemps"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

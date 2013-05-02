@@ -34,8 +34,6 @@
     IBOutlet UIImageView *forecastPic2;
     IBOutlet UIImageView *forecastPic3;
     IBOutlet UIImageView *forecastPic4;
-    
-    NSTimer *timer;
 }
 
 @property (nonatomic, strong) NSMutableArray *weatherArray;
@@ -50,7 +48,6 @@
 @property (nonatomic, strong) NSMutableArray *arrayOfLowF;
 @property (nonatomic, strong) NSMutableArray *arrayOfLowC;
 @property (nonatomic, assign) NSInteger fahrenheit;
-@property (nonatomic, retain) NSTimer *timer;
 //@property (nonatomic, strong) NSMutableArray *arrayOfSDHigh;
 //@property (nonatomic, strong) NSMutableArray *arrayOfSDLow;
 
