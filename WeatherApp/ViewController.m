@@ -366,7 +366,7 @@
     UIImage *rainImage = [UIImage imageNamed:@"Rain1.jpeg"];
     UIImage *cloudsImage = [UIImage imageNamed:@"Clouds1.jpeg"];
     UIImage *snowImage = [UIImage imageNamed:@"Snow.jpg"];
-    UIImage *sunImage = [UIImage imageNamed:@"Sun1.jpeg"];
+    UIImage *sunImage = [UIImage imageNamed:@"Sun.jpeg"];
     UIImage *cloudIcon = [UIImage imageNamed:@"CloudsIcon.png"];
     UIImage *rainIcon = [UIImage imageNamed:@"RainIcon.png"];
     UIImage *snowIcon = [UIImage imageNamed:@"SnowIcon.png"];
