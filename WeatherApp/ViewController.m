@@ -6,6 +6,14 @@
 //  Copyright (c) 2013 John. All rights reserved.
 //
 
+// You seem to be successfully downloading, parsing, averaging, and displaying the weather data.
+// It's extremely bad style to have so many variables that are handled identically, though -
+// that's what object-oriented programming is for, and arrays and dictionaries.
+// Also, every weather app has forecast information. We have forecast uncertainty
+// information that nobody else has, and you're ignoring it.
+// Project grade: 80
+// Course grade: 60 (I didn't receive any assignments from you)
+
 #import "ViewController.h"
 
 #define weatherURL @"http://weatherparser.herokuapp.com"
